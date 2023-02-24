@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,50 @@
     <title>Sign-up form</title>
     <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body>
-    
+
+<body class="bg-gradient-to-br from-emerald-300 to-green-600 h-[90vh]">
+    <h1 class="ml-7 mt-10 text-5xl text-white font-bold">Sign Up</h1>
+    <div class="absolute top-20 left-0 w-full overflow-hidden leading-[0]">
+        <svg class="relative block w-svg h-[109px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-white"></path>
+        </svg>
+    </div>
+    <div class="relative bottom-[-60px] bg-white w-full px-2 pb-2 pt-8">
+        <form class="flex flex-col items-center" action="#">    
+            <div class="w-4/5 relative mt-4">
+                <input class="w-full p-1 border-b border-gray-400 mb-4 focus-visible:outline-0 focus-visible:border-green-400 focus-visible:placeholder:invisible focus-visible:invalid:border-red-400 peer" name="first-name" id="first-name" placeholder="First Name *" maxlength="245" pattern="^[^0-9]+$" type="text" required>
+                <label data-help=" (Invalid characters)" class="opacity-0 peer-focus-visible:opacity-100 peer-focus-visible:animate-fade py-1 text-sm absolute bottom-11 left-1 peer-valid:text-green-500 peer-invalid:text-red-400 peer-focus-visible:peer-invalid:after:content-[attr(data-help)] peer-focus-visible:peer-invalid:after:animate-help peer-focus-visible:peer-valid:after:opacity-0 transition-all" for="first-name">First Name</label>
+            </div>
+            
+            <div class="w-4/5 relative mt-4">
+                <input class="w-full p-1 border-b border-gray-400 mb-4 focus-visible:outline-0 focus-visible:border-green-400 focus-visible:placeholder:invisible focus-visible:invalid:border-red-400 peer" name="last-name" id="last-name" placeholder="Last Name *" maxlength="245" pattern="^[^0-9]+$" type="text" required>
+                <label  data-help=" (Invalid characters)" class="opacity-0 peer-focus-visible:opacity-100 peer-focus-visible:animate-fade py-1 text-sm absolute bottom-11 left-1 peer-valid:text-green-500 peer-invalid:text-red-400 peer-focus-visible:peer-invalid:after:content-[attr(data-help)] peer-focus-visible:peer-invalid:after:animate-help peer-focus-visible:peer-valid:after:opacity-0 transition-all" for="last-name">Last Name</label>
+            </div>
+            
+            <div class="w-4/5 relative mt-4">
+                <input class="w-full p-1 border-b border-gray-400 mb-4 focus-visible:outline-0 focus-visible:border-green-400 focus-visible:placeholder:invisible focus-visible:invalid:border-red-400 peer" name="email" id="email" placeholder="Email *" type="email" required>
+                <label data-help=" (someone@example.com)" class="opacity-0 peer-focus-visible:opacity-100 peer-focus-visible:animate-fade py-1 text-sm absolute bottom-11 left-1 peer-valid:text-green-500 peer-invalid:text-red-400 peer-focus-visible:peer-invalid:after:content-[attr(data-help)] peer-focus-visible:peer-invalid:after:animate-help peer-focus-visible:peer-valid:after:opacity-0 transition-all" for="email">Email</label>
+            </div>
+            
+            <div class="w-4/5 relative mt-4">
+                <input class="w-full p-1 border-b border-gray-400 mb-4 focus-visible:outline-0 focus-visible:border-green-400 focus-visible:placeholder:invisible focus-visible:invalid:border-red-400 peer" name="phone" id="phone" placeholder="Phone number" pattern="\d+$" type="tel">
+                <label data-help=" (Numbers only)" class="opacity-0 peer-focus-visible:opacity-100 peer-focus-visible:animate-fade py-1 text-sm absolute bottom-11 left-1 peer-valid:text-green-500 peer-invalid:text-red-400 peer-focus-visible:peer-invalid:after:content-[attr(data-help)] peer-focus-visible:peer-invalid:after:animate-help peer-focus-visible:peer-valid:after:opacity-0 transition-all" for="phone">Phone Number</label>
+            </div>
+
+            <div class="w-4/5 relative mt-4">
+                <input class="w-full p-1 border-b border-gray-400 mb-4 focus-visible:outline-0 focus-visible:border-green-400 focus-visible:placeholder:invisible focus-visible:invalid:border-red-400 peer" name="password" id="password" placeholder="Password" minlength="8" type="password" required>
+                <label data-help="* Must be at least 8 characters long" class="opacity-0 peer-focus-visible:opacity-100 peer-focus-visible:animate-fade py-1 text-sm absolute bottom-11 left-1 peer-valid:text-green-500 peer-invalid:text-red-400 peer-focus-visible:peer-invalid:after:content-[attr(data-help)] peer-focus-visible:peer-invalid:after:animate-help peer-focus-visible:peer-valid:after:opacity-0 transition-all after:absolute after:left-0 after:top-16 after:whitespace-nowrap" for="password">Password</label>
+            </div>
+
+            <div class="w-4/5 relative mt-4">
+                <input class="w-full p-1 border-b border-gray-400 mb-4 focus-visible:outline-0 focus-visible:border-green-400 focus-visible:placeholder:invisible focus-visible:invalid:border-red-400 peer" name="confirm-password" id="confirm-password" placeholder="Confirm Password" type="password" required>
+                <label data-help="* Passwords do not match" class="opacity-0 peer-focus-visible:opacity-100 peer-focus-visible:animate-fade py-1 text-sm absolute bottom-11 left-1 peer-valid:text-green-500 peer-invalid:text-red-400 peer-focus-visible:peer-invalid:after:content-[attr(data-help)] peer-focus-visible:peer-invalid:after:animate-help peer-focus-visible:peer-valid:after:opacity-0 transition-all after:absolute after:left-0 after:top-16 after:whitespace-nowrap" for="confirm-password">Confirm password</label>
+            </div>
+            <div class="w-4/5 my-6">
+                <button class="bg-emerald-500 w-full py-2 px-10 mx-auto rounded-full text-lg text-white font-bold">Sign Up</button>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
