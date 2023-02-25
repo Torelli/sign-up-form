@@ -952,6 +952,11 @@ video {
   white-space: nowrap;
 }
 
+.hover\:bg-emerald-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 211 153 / var(--tw-bg-opacity));
+}
+
 .focus-visible\:border-green-400:focus-visible {
   --tw-border-opacity: 1;
   border-color: rgb(74 222 128 / var(--tw-border-opacity));
@@ -972,6 +977,11 @@ video {
 .focus-visible\:invalid\:border-red-400:invalid:focus-visible {
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
+.active\:bg-emerald-600:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
 .peer:valid ~ .peer-valid\:text-green-500 {
