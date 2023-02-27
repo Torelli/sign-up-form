@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       dropShadow: {
-        'no-left': '25px 25px 25px rgb(0 0 0 / 0.15)'
+        'no-left': '25px 25px 10px rgb(0 0 0 / 0.15)'
       },
       width: {
         svg: 'calc(174% + 1.3px)'
