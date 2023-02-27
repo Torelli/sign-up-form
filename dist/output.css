@@ -963,6 +963,10 @@ video {
   .md\:right-10 {
     right: 2.5rem;
   }
+  
+  .md\:right-32 {
+    right: 8rem;
+  }
 
   .md\:top-0 {
     top: 0px;
