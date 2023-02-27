@@ -661,6 +661,16 @@ video {
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
+.border-green-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
 .bg-emerald-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(16 185 129 / var(--tw-bg-opacity));
@@ -776,6 +786,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -867,8 +887,40 @@ video {
   animation: fade 0.2s;
 }
 
+.peer:focus-visible ~ .peer-focus-visible\:text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .peer:focus-visible ~ .peer-focus-visible\:opacity-100 {
   opacity: 1;
+}
+
+@keyframes help {
+  0%, 4% {
+    content: var(--tw-content);
+    opacity: 0;
+  }
+
+  5%, 100% {
+    content: var(--tw-content);
+    opacity: 1;
+  }
+}
+
+.peer:focus-visible ~ .peer-focus-visible\:after\:animate-help::after {
+  content: var(--tw-content);
+  animation: help 80s;
+}
+
+.peer:focus-visible ~ .peer-focus-visible\:after\:opacity-0::after {
+  content: var(--tw-content);
+  opacity: 0;
+}
+
+.peer:focus-visible ~ .peer-focus-visible\:after\:content-\[attr\(data-help\)\]::after {
+  --tw-content: attr(data-help);
+  content: var(--tw-content);
 }
 
 .peer:focus-visible:valid ~ .peer-focus-visible\:peer-valid\:after\:opacity-0::after {
@@ -894,6 +946,80 @@ video {
 }
 
 .peer:focus-visible:invalid ~ .peer-focus-visible\:peer-invalid\:after\:content-\[attr\(data-help\)\]::after {
+  --tw-content: attr(data-help);
+  content: var(--tw-content);
+}
+
+.focus-visible\:aria-\[invalid\]\:border-red-400[aria-invalid]:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
+.focus-visible\:aria-\[invalid\=true\]\:border-red-400[aria-invalid=true]:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
+.focus-visible\:aria-\[invalid\=false\]\:border-green-400[aria-invalid=false]:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+
+.peer[aria-invalid] ~ .peer-aria-\[invalid\]\:text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
+.peer[aria-invalid=true] ~ .peer-aria-\[invalid\=true\]\:text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
+.peer[aria-invalid=false] ~ .peer-aria-\[invalid\=false\]\:text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+@keyframes help {
+  0%, 4% {
+    content: var(--tw-content);
+    opacity: 0;
+  }
+
+  5%, 100% {
+    content: var(--tw-content);
+    opacity: 1;
+  }
+}
+
+.peer:focus-visible[aria-invalid] ~ .peer-focus-visible\:peer-aria-\[invalid\]\:after\:animate-help::after {
+  content: var(--tw-content);
+  animation: help 80s;
+}
+
+@keyframes help {
+  0%, 4% {
+    content: var(--tw-content);
+    opacity: 0;
+  }
+
+  5%, 100% {
+    content: var(--tw-content);
+    opacity: 1;
+  }
+}
+
+.peer:focus-visible[aria-invalid=true] ~ .peer-focus-visible\:peer-aria-\[invalid\=true\]\:after\:animate-help::after {
+  content: var(--tw-content);
+  animation: help 80s;
+}
+
+.peer:focus-visible[aria-invalid] ~ .peer-focus-visible\:peer-aria-\[invalid\]\:after\:content-\[attr\(data-help\)\]::after {
+  --tw-content: attr(data-help);
+  content: var(--tw-content);
+}
+
+.peer:focus-visible[aria-invalid=true] ~ .peer-focus-visible\:peer-aria-\[invalid\=true\]\:after\:content-\[attr\(data-help\)\]::after {
   --tw-content: attr(data-help);
   content: var(--tw-content);
 }
